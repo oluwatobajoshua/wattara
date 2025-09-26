@@ -1,0 +1,56 @@
+<?php
+declare(strict_types=1);
+
+namespace App\Test\Fixture;
+
+use Cake\TestSuite\Fixture\TestFixture;
+
+/**
+ * BankDetailsFixture
+ */
+class BankDetailsFixture extends TestFixture
+{
+    /**
+     * Fields
+     *
+     * @var array
+     */
+    // phpcs:disable
+    public $fields = [
+        'id' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
+        'full_name' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null],
+        'account_id' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'bank_id' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'number' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'created' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => false, 'default' => null, 'comment' => ''],
+        'modified' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => false, 'default' => null, 'comment' => ''],
+        '_constraints' => [
+            'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
+        ],
+        '_options' => [
+            'engine' => 'InnoDB',
+            'collation' => 'utf8mb4_general_ci'
+        ],
+    ];
+    // phpcs:enable
+    /**
+     * Init method
+     *
+     * @return void
+     */
+    public function init(): void
+    {
+        $this->records = [
+            [
+                'id' => 1,
+                'full_name' => 'Lorem ipsum dolor sit amet',
+                'account_id' => 1,
+                'bank_id' => 1,
+                'number' => 1,
+                'created' => '2021-01-05 12:10:09',
+                'modified' => '2021-01-05 12:10:09',
+            ],
+        ];
+        parent::init();
+    }
+}
